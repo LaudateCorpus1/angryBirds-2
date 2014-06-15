@@ -7,7 +7,6 @@
 //
 
 #import "Gameplay.h"
-#define BIRD_COUNT 3
 
 @implementation Gameplay {
     CCPhysicsNode * _physicsNode;
@@ -16,16 +15,18 @@
     CCNode * _contentNode;
     CCNode * _launcher;
     CCNode * _currentBird;
-    int birdCount;
+    int triesCount;
     OALSimpleAudio * sounds;
+    CCLabelBMFont * _scoreLabel;
 }
 
 - (void)didLoadFromCCB {
     self.userInteractionEnabled = TRUE;
     _physicsNode.debugDraw = TRUE;
     _physicsNode.collisionDelegate = self;
-    birdCount = 0;
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    triesCount = [[defaults objectForKey:@"BirdCount"] intValue];
+    [_scoreLabel setString: [NSString stringWithFormat:@"%d x", triesCount]];
     NSString * levelSelected = [NSString stringWithFormat:@"Levels/%@",[defaults objectForKey:@"LevelSelected"]];
     CCScene * level = [CCBReader loadAsScene:levelSelected];
     [_levelNode addChild:level];
@@ -39,7 +40,7 @@
 }
 
 - (void)launchBird:(id)sender {
-    if (birdCount < BIRD_COUNT) {
+    if (triesCount) {
         CCNode * bird = [CCBReader load:@"Bird"];
         // Calculo la rotación en Radianes
         float rotationRadians = CC_DEGREES_TO_RADIANS(_launcher.rotation);
@@ -54,8 +55,9 @@
         // Agrego el impulso inicial
         CGPoint force = ccpMult(directionVector, 10000);
         [bird.physicsBody applyForce:force];
-        birdCount++;
+        triesCount--;
         [sounds playEffect:@"flying.mp3"];
+        [_scoreLabel setString: [NSString stringWithFormat:@"%d x", triesCount]];
     }
 }
 

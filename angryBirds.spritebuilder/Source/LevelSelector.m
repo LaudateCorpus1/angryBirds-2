@@ -18,16 +18,19 @@
 
 - (void) playLevel1 {
     [defaults setObject:@"Level1" forKey:@"LevelSelected"];
+    [defaults setObject:@"3" forKey:@"BirdCount"];
     [self loadLevel];
 }
 
 - (void) playLevel2 {
     [defaults setObject:@"Level2" forKey:@"LevelSelected"];
+    [defaults setObject:@"4" forKey:@"BirdCount"];
     [self loadLevel];
 }
 
 - (void) playLevel3 {
     [defaults setObject:@"Level3" forKey:@"LevelSelected"];
+    [defaults setObject:@"5" forKey:@"BirdCount"];
     [self loadLevel];
 }
 
