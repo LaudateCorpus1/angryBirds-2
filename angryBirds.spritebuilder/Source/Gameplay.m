@@ -25,7 +25,9 @@
     _physicsNode.debugDraw = TRUE;
     _physicsNode.collisionDelegate = self;
     birdCount = 0;
-    CCScene * level = [CCBReader loadAsScene:@"Levels/Level2"];
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSString * levelSelected = [NSString stringWithFormat:@"Levels/%@",[defaults objectForKey:@"LevelSelected"]];
+    CCScene * level = [CCBReader loadAsScene:levelSelected];
     [_levelNode addChild:level];
     sounds = [OALSimpleAudio sharedInstance];
     [sounds playBg:@"background.mp3" loop:YES];
@@ -78,8 +80,9 @@
     [sounds playEffect:@"explosion.mp3"];
 }
 
-- (void)retry {
-    [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
+- (void)back {
+    [sounds stopEverything];
+    [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"LevelSelector"]];
 }
 
 @end
