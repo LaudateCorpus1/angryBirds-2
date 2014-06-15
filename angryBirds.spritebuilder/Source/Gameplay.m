@@ -17,6 +17,7 @@
     CCNode * _launcher;
     CCNode * _currentBird;
     int birdCount;
+    OALSimpleAudio * sounds;
 }
 
 - (void)didLoadFromCCB {
@@ -26,6 +27,8 @@
     birdCount = 0;
     CCScene * level = [CCBReader loadAsScene:@"Levels/Level2"];
     [_levelNode addChild:level];
+    sounds = [OALSimpleAudio sharedInstance];
+    [sounds playBg:@"background.mp3" loop:YES];
 }
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
@@ -50,6 +53,7 @@
         CGPoint force = ccpMult(directionVector, 10000);
         [bird.physicsBody applyForce:force];
         birdCount++;
+        [sounds playEffect:@"flying.mp3"];
     }
 }
 
@@ -71,6 +75,7 @@
     [enemy.parent addChild:explosion];
     // finally, remove the destroyed seal
     [enemy removeFromParent];
+    [sounds playEffect:@"explosion.mp3"];
 }
 
 - (void)retry {

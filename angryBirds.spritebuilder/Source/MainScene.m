@@ -8,11 +8,18 @@
 
 #import "MainScene.h"
 
-@implementation MainScene
+@implementation MainScene {
+    OALSimpleAudio * bgmusic;
+}
+
+- (void)didLoadFromCCB {
+    bgmusic = [OALSimpleAudio sharedInstance];
+    [bgmusic playBg:@"intro.mp3" loop:TRUE];
+}
 
 - (void) play {
-//    CCLOG(@"play button pressed");
-    CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
+    [bgmusic stopEverything];
+    CCScene * gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
     [[CCDirector sharedDirector] replaceScene:gameplayScene];
 }
 
