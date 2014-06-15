@@ -10,10 +10,13 @@
 
 @implementation LevelSelector {
     NSUserDefaults * defaults;
+    OALSimpleAudio * music;
 }
 
 - (void)didLoadFromCCB {
     defaults = [NSUserDefaults standardUserDefaults];
+    music = [OALSimpleAudio sharedInstance];
+    [music playBg:@"selector.mp3" loop:TRUE];
 }
 
 - (void) playLevel1 {
@@ -40,6 +43,7 @@
 }
 
 - (void) back {
+    [music stopEverything];
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"MainScene"]];
 }
 

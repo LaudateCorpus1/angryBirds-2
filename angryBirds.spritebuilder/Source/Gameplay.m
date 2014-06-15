@@ -22,7 +22,7 @@
 
 - (void)didLoadFromCCB {
     self.userInteractionEnabled = TRUE;
-    _physicsNode.debugDraw = TRUE;
+//    _physicsNode.debugDraw = TRUE;
     _physicsNode.collisionDelegate = self;
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     triesCount = [[defaults objectForKey:@"BirdCount"] intValue];

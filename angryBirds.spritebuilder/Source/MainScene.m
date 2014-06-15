@@ -9,18 +9,24 @@
 #import "MainScene.h"
 
 @implementation MainScene {
-    OALSimpleAudio * bgmusic;
+    OALSimpleAudio * music;
 }
 
 - (void)didLoadFromCCB {
-    bgmusic = [OALSimpleAudio sharedInstance];
-    [bgmusic playBg:@"intro.mp3" loop:TRUE];
+    music = [OALSimpleAudio sharedInstance];
+    if (![music bgPlaying]) {
+        [music playBg:@"intro.mp3" loop:TRUE];
+    }
 }
 
 - (void) play {
-    [bgmusic stopEverything];
+    [music stopEverything];
     CCScene * levelSelectorScene = [CCBReader loadAsScene:@"LevelSelector"];
     [[CCDirector sharedDirector] replaceScene:levelSelectorScene];
+}
+
+- (void) about {
+    [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"About"]];
 }
 
 @end
