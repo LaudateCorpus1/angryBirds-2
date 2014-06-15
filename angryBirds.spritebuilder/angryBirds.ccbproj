@@ -93,6 +93,11 @@
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
+		<key>Sprites/about.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>Sprites/angry-birds-logo.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -108,50 +113,105 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
-		<key>Sprites/enemy.png</key>
+		<key>Sprites/back.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
-		<key>Sprites/enemy2.png</key>
+		<key>Sprites/button-green.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
-		<key>Sprites/enemy3.png</key>
+		<key>Sprites/circlebrick.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+		<key>Sprites/circlewood.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
 		</dict>
 		<key>Sprites/launcher.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>4</integer>
 		</dict>
-		<key>Sprites/shape-0.png</key>
+		<key>Sprites/longbrick.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>4</integer>
+			<integer>1</integer>
 		</dict>
-		<key>Sprites/shape-1.png</key>
+		<key>Sprites/longwood.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>4</integer>
+			<integer>1</integer>
 		</dict>
-		<key>Sprites/shape-2.png</key>
+		<key>Sprites/pigg-1.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>4</integer>
+			<integer>2</integer>
 		</dict>
-		<key>Sprites/shape-3.png</key>
+		<key>Sprites/pigg-2.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>4</integer>
+			<integer>2</integer>
+		</dict>
+		<key>Sprites/pigg-3.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Sprites/play_button.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Sprites/rectanglebrick.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Sprites/rectanglewood.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Sprites/reset.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Sprites/squarebrick.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Sprites/squarewood.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
 		</dict>
 		<key>Sprites/tower-btn.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>4</integer>
+		</dict>
+		<key>Sprites/trianglebrick.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Sprites/trianglewood.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Sprites/volume.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
 		</dict>
 		<key>background.png</key>
 		<dict>
@@ -244,11 +304,6 @@
 		<dict>
 			<key>scaleFrom</key>
 			<integer>4</integer>
-		</dict>
-		<key>splash_screen.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>versionStr</key>

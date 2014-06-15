@@ -54,9 +54,6 @@
     
     [self setupCocos2dWithOptions:cocos2dSetup];
     
-//    [CCBReader load:@"Bird"];
-//    [CCBReader load:@"Enemy"];
-    
     return YES;
 }
 

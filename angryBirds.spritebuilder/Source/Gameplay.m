@@ -63,7 +63,7 @@
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair enemy:(CCNode *)nodeA wildcard:(CCNode *)nodeB{
     float energy = [pair totalKineticEnergy];
-    if (energy > 5000.f) {
+    if (energy > KINETIC_ENERGY_REQUIRED) {
         [self enemyRemove:nodeA];
     }
 }

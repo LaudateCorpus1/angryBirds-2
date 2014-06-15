@@ -42,7 +42,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>Sprites/enemy.png</string>
+								<string>Sprites/pigg-1.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -60,7 +60,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>Sprites/enemy2.png</string>
+								<string>Sprites/pigg-2.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -78,7 +78,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>Sprites/enemy3.png</string>
+								<string>Sprites/pigg-3.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -111,7 +111,7 @@
 			<key>bodyShape</key>
 			<integer>1</integer>
 			<key>cornerRadius</key>
-			<real>31.61328125</real>
+			<real>23.3203125</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -123,8 +123,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>30.605438232421875</real>
-					<real>28.72265625</real>
+					<real>25.234375</real>
+					<real>21.69921875</real>
 				</array>
 			</array>
 		</dict>
@@ -189,7 +189,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>Sprites/enemy3.png</string>
+					<string>Sprites/pigg-3.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -206,6 +206,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 		<key>seqExpanded</key>
 		<true/>
 	</dict>
@@ -263,7 +265,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.5</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
