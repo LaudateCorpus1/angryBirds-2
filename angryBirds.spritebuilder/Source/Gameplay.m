@@ -87,4 +87,8 @@
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"LevelSelector"]];
 }
 
+- (void)reset {
+    [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
+}
+
 @end

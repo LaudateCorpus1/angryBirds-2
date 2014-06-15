@@ -93,6 +93,11 @@
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
+		<key>Sprites/angry-birds-logo.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>Sprites/angryBird.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -102,16 +107,6 @@
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>
-		</dict>
-		<key>Sprites/bear.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>4</integer>
-		</dict>
-		<key>Sprites/catapultarm.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>4</integer>
 		</dict>
 		<key>Sprites/enemy.png</key>
 		<dict>
