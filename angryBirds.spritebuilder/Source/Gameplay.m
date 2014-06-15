@@ -7,6 +7,7 @@
 //
 
 #import "Gameplay.h"
+#define BIRD_COUNT 3
 
 @implementation Gameplay {
     CCPhysicsNode * _physicsNode;
@@ -15,12 +16,14 @@
     CCNode * _contentNode;
     CCNode * _launcher;
     CCNode * _currentBird;
+    int birdCount;
 }
 
 - (void)didLoadFromCCB {
     self.userInteractionEnabled = TRUE;
     _physicsNode.debugDraw = TRUE;
     _physicsNode.collisionDelegate = self;
+    birdCount = 0;
     CCScene * level = [CCBReader loadAsScene:@"Levels/Level2"];
     [_levelNode addChild:level];
 }
@@ -31,20 +34,23 @@
 }
 
 - (void)launchBird:(id)sender {
-    CCNode * bird = [CCBReader load:@"Bird"];
-    // Calculo la rotación en Radianes
-    float rotationRadians = CC_DEGREES_TO_RADIANS(_launcher.rotation);
-    // Vector para la rotación
-    CGPoint directionVector = ccp(sinf(rotationRadians),cosf(rotationRadians));
-    CGPoint ballOffset = ccpMult(directionVector, 50);
-    bird.position = ccpAdd(_launcher.position, ballOffset);
-    [_physicsNode addChild:bird];
-    self.position = ccp(0, 0);
-    CCActionFollow * follow = [CCActionFollow actionWithTarget:bird worldBoundary:self.boundingBox];
-    [_contentNode runAction:follow];
-    // Agrego el impulso inicial
-    CGPoint force = ccpMult(directionVector, 10000);
-    [bird.physicsBody applyForce:force];
+    if (birdCount < BIRD_COUNT) {
+        CCNode * bird = [CCBReader load:@"Bird"];
+        // Calculo la rotación en Radianes
+        float rotationRadians = CC_DEGREES_TO_RADIANS(_launcher.rotation);
+        // Vector para la rotación
+        CGPoint directionVector = ccp(sinf(rotationRadians),cosf(rotationRadians));
+        CGPoint ballOffset = ccpMult(directionVector, 50);
+        bird.position = ccpAdd(_launcher.position, ballOffset);
+        [_physicsNode addChild:bird];
+        self.position = ccp(0, 0);
+        CCActionFollow * follow = [CCActionFollow actionWithTarget:bird worldBoundary:self.boundingBox];
+        [_contentNode runAction:follow];
+        // Agrego el impulso inicial
+        CGPoint force = ccpMult(directionVector, 10000);
+        [bird.physicsBody applyForce:force];
+        birdCount++;
+    }
 }
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair enemy:(CCNode *)nodeA wildcard:(CCNode *)nodeB{
