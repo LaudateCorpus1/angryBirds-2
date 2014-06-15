@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Sprites/angryBird.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{265, 1169}, {143, 132}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 3}, {143, 132}}</string>
+			<key>sourceSize</key>
+			<string>{146, 138}</string>
+		</dict>
+		<key>Sprites/angrybird2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{410, 1169}, {143, 131}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {143, 131}}</string>
+			<key>sourceSize</key>
+			<string>{146, 132}</string>
+		</dict>
+		<key>Sprites/bear.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1805}, {161, 156}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {161, 156}}</string>
+			<key>sourceSize</key>
+			<string>{161, 156}</string>
+		</dict>
+		<key>Sprites/catapultarm.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{441, 1302}, {84, 355}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {84, 355}}</string>
+			<key>sourceSize</key>
+			<string>{84, 355}</string>
+		</dict>
+		<key>Sprites/enemy.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{159, 1753}, {252, 294}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {252, 294}}</string>
+			<key>sourceSize</key>
+			<string>{252, 294}</string>
+		</dict>
+		<key>Sprites/enemy2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{559, 1609}, {253, 301}}</string>
+			<key>offset</key>
+			<string>{0, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {253, 301}}</string>
+			<key>sourceSize</key>
+			<string>{254, 304}</string>
+		</dict>
+		<key>Sprites/enemy3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{527, 1302}, {254, 305}}</string>
+			<key>offset</key>
+			<string>{0, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {254, 305}}</string>
+			<key>sourceSize</key>
+			<string>{260, 308}</string>
+		</dict>
+		<key>Sprites/launcher.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {266, 798}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {266, 798}}</string>
+			<key>sourceSize</key>
+			<string>{272, 800}</string>
+		</dict>
+		<key>Sprites/shape-0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{265, 801}, {366, 356}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 2}, {366, 356}}</string>
+			<key>sourceSize</key>
+			<string>{368, 360}</string>
+		</dict>
+		<key>Sprites/shape-1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{75, 1307}, {444, 364}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {444, 364}}</string>
+			<key>sourceSize</key>
+			<string>{448, 368}</string>
+		</dict>
+		<key>Sprites/shape-2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{413, 1753}, {144, 272}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {144, 272}}</string>
+			<key>sourceSize</key>
+			<string>{144, 272}</string>
+		</dict>
+		<key>Sprites/shape-3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1307}, {496, 72}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {496, 72}}</string>
+			<key>sourceSize</key>
+			<string>{496, 72}</string>
+		</dict>
+		<key>Sprites/tower-btn.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 801}, {504, 262}}</string>
+			<key>offset</key>
+			<string>{0, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 138}, {504, 262}}</string>
+			<key>sourceSize</key>
+			<string>{504, 400}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{2048, 2048}</string>
+		<key>textureFileName</key>
+		<string>Sprites.png</string>
+	</dict>
+</dict>
+</plist>
