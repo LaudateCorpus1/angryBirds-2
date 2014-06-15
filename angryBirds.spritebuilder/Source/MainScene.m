@@ -19,8 +19,8 @@
 
 - (void) play {
     [bgmusic stopEverything];
-    CCScene * gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
-    [[CCDirector sharedDirector] replaceScene:gameplayScene];
+    CCScene * levelSelectorScene = [CCBReader loadAsScene:@"LevelSelector"];
+    [[CCDirector sharedDirector] replaceScene:levelSelectorScene];
 }
 
 @end

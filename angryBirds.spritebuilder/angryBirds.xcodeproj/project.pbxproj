@@ -39,6 +39,7 @@
 		D195CA83194E2ACE00400C92 /* flying.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D195CA81194E2ACE00400C92 /* flying.mp3 */; };
 		D195CA85194E2C7500400C92 /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D195CA84194E2C7500400C92 /* intro.mp3 */; };
 		D195CA87194E2DD900400C92 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D195CA86194E2DD900400C92 /* background.mp3 */; };
+		D195CA8D194E31FA00400C92 /* LevelSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = D195CA8C194E31FA00400C92 /* LevelSelector.m */; };
 		D1DABDCA194DE75700EA2485 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DABDC9194DE75700EA2485 /* Bird.m */; };
 		D1DABDCE194DE76200EA2485 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DABDCD194DE76200EA2485 /* Enemy.m */; };
 		D1DABDD1194E066200EA2485 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DABDD0194E066200EA2485 /* Gameplay.m */; };
@@ -99,6 +100,8 @@
 		D195CA81194E2ACE00400C92 /* flying.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flying.mp3; sourceTree = "<group>"; };
 		D195CA84194E2C7500400C92 /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = intro.mp3; sourceTree = "<group>"; };
 		D195CA86194E2DD900400C92 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		D195CA8B194E31FA00400C92 /* LevelSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelSelector.h; path = Source/LevelSelector.h; sourceTree = "<group>"; };
+		D195CA8C194E31FA00400C92 /* LevelSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelSelector.m; path = Source/LevelSelector.m; sourceTree = "<group>"; };
 		D1DABDC8194DE75700EA2485 /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bird.h; path = Source/Bird.h; sourceTree = "<group>"; };
 		D1DABDC9194DE75700EA2485 /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bird.m; path = Source/Bird.m; sourceTree = "<group>"; };
 		D1DABDCC194DE76200EA2485 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy.h; path = Source/Enemy.h; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				D1DABDD0194E066200EA2485 /* Gameplay.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				D195CA8B194E31FA00400C92 /* LevelSelector.h */,
+				D195CA8C194E31FA00400C92 /* LevelSelector.m */,
 				D1DABDC8194DE75700EA2485 /* Bird.h */,
 				D1DABDC9194DE75700EA2485 /* Bird.m */,
 				D1DABDCC194DE76200EA2485 /* Enemy.h */,
@@ -358,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
+				D195CA8D194E31FA00400C92 /* LevelSelector.m in Sources */,
 				D1DABDCE194DE76200EA2485 /* Enemy.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				D1DABDCA194DE75700EA2485 /* Bird.m in Sources */,
