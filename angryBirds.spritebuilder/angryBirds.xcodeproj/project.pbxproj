@@ -43,6 +43,7 @@
 		D1DABDCA194DE75700EA2485 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DABDC9194DE75700EA2485 /* Bird.m */; };
 		D1DABDCE194DE76200EA2485 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DABDCD194DE76200EA2485 /* Enemy.m */; };
 		D1DABDD1194E066200EA2485 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DABDD0194E066200EA2485 /* Gameplay.m */; };
+		D1E65167194E8BA6004A325A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E65166194E8BA6004A325A /* Images.xcassets */; };
 		D1FA8136194E4291003C0090 /* selector.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1FA8135194E4291003C0090 /* selector.mp3 */; };
 		D1FA813A194E46BA003C0090 /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FA8139194E46BA003C0090 /* About.m */; };
 /* End PBXBuildFile section */
@@ -87,7 +88,7 @@
 		B73789861807631A0076A88C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Source/Prefix.pch; sourceTree = SOURCE_ROOT; };
 		B7378992180767190076A88C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Source/MainScene.h; sourceTree = "<group>"; };
 		B7378993180767190076A88C /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Source/MainScene.m; sourceTree = "<group>"; };
-		B77F1B2E17B978D7009739AE /* angryBirds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = angryBirds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77F1B2E17B978D7009739AE /* Angry Birds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Angry Birds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77F1B3117B978D7009739AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B77F1B3317B978D7009739AE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		B77F1B3517B978D7009739AE /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -110,6 +111,7 @@
 		D1DABDCD194DE76200EA2485 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Enemy.m; path = Source/Enemy.m; sourceTree = "<group>"; };
 		D1DABDCF194E066200EA2485 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		D1DABDD0194E066200EA2485 /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
+		D1E65166194E8BA6004A325A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Images.xcassets; sourceTree = "<group>"; };
 		D1FA8135194E4291003C0090 /* selector.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = selector.mp3; sourceTree = "<group>"; };
 		D1FA8138194E46BA003C0090 /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = Source/About.h; sourceTree = "<group>"; };
 		D1FA8139194E46BA003C0090 /* About.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = About.m; path = Source/About.m; sourceTree = "<group>"; };
@@ -209,7 +211,7 @@
 		B77F1B2F17B978D7009739AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B77F1B2E17B978D7009739AE /* angryBirds.app */,
+				B77F1B2E17B978D7009739AE /* Angry Birds.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +236,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D1E65166194E8BA6004A325A /* Images.xcassets */,
 				D195CA7E194E2AC400400C92 /* Sounds */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
@@ -281,7 +284,7 @@
 			);
 			name = angryBirds;
 			productName = Example;
-			productReference = B77F1B2E17B978D7009739AE /* angryBirds.app */;
+			productReference = B77F1B2E17B978D7009739AE /* Angry Birds.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -355,6 +358,7 @@
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
+				D1E65167194E8BA6004A325A /* Images.xcassets in Resources */,
 				D195CA82194E2ACE00400C92 /* explosion.mp3 in Resources */,
 				D1FA8136194E4291003C0090 /* selector.mp3 in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
@@ -456,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -479,7 +484,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = angryBirds;
+				PRODUCT_NAME = "Angry Birds";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -489,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -510,7 +516,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = angryBirds;
+				PRODUCT_NAME = "Angry Birds";
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
