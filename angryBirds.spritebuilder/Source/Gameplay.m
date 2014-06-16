@@ -8,7 +8,7 @@
 
 #import "Gameplay.h"
 
-static const float MIN_SPEED = 1.f;
+static const float MIN_SPEED = 2.f;
 
 @implementation Gameplay {
     CCPhysicsNode * _physicsNode;
@@ -20,6 +20,7 @@ static const float MIN_SPEED = 1.f;
     int triesCount;
     OALSimpleAudio * sounds;
     CCLabelBMFont * _scoreLabel;
+    CCSprite * _scoreImage;
     CCAction * _followBird;
     int enemyCount;
     NSUserDefaults * defaults;
@@ -38,6 +39,9 @@ static const float MIN_SPEED = 1.f;
     [_levelNode addChild:level];
     sounds = [OALSimpleAudio sharedInstance];
     [sounds playBg:@"background.mp3" loop:YES];
+    CCActionMoveTo * panorama = [CCActionMoveTo actionWithDuration:2.5f position:ccp(-350.0f, 0.f)];
+    CCActionMoveTo * panoramaBack = [CCActionMoveTo actionWithDuration:2.5f position:ccp(0.0f, 0.f)];
+    [self runAction: [CCActionSequence actions:panorama, panoramaBack, nil]];
 }
 
 - (void)launchBird:(id)sender {
