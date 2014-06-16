@@ -150,7 +150,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>background.png</string>
+							<string>grass-back.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -167,8 +167,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

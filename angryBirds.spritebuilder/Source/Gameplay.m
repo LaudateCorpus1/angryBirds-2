@@ -8,7 +8,7 @@
 
 #import "Gameplay.h"
 
-static const float MIN_SPEED = 5.f;
+static const float MIN_SPEED = 1.f;
 
 @implementation Gameplay {
     CCPhysicsNode * _physicsNode;
@@ -21,14 +21,17 @@ static const float MIN_SPEED = 5.f;
     OALSimpleAudio * sounds;
     CCLabelBMFont * _scoreLabel;
     CCAction * _followBird;
+    int enemyCount;
+    NSUserDefaults * defaults;
 }
 
 - (void)didLoadFromCCB {
     self.userInteractionEnabled = TRUE;
 //    _physicsNode.debugDraw = TRUE;
     _physicsNode.collisionDelegate = self;
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    defaults = [NSUserDefaults standardUserDefaults];
     triesCount = [[defaults objectForKey:@"BirdCount"] intValue];
+    enemyCount = [[defaults objectForKey:@"EnemyCount"] intValue];
     [_scoreLabel setString: [NSString stringWithFormat:@"%d x", triesCount]];
     NSString * levelSelected = [NSString stringWithFormat:@"Levels/%@",[defaults objectForKey:@"LevelSelected"]];
     CCScene * level = [CCBReader loadAsScene:levelSelected];
@@ -70,17 +73,23 @@ static const float MIN_SPEED = 5.f;
 }
 
 - (void)enemyRemove:(CCNode *)enemy {
-    // load particle effect
-    CCParticleSystem * explosion = (CCParticleSystem *)[CCBReader load:@"EnemyExplosion"];
-    // make the particle effect clean itself up, once it is completed
-    explosion.autoRemoveOnFinish = TRUE;
-    // place the particle effect on the seals position
-    explosion.position = enemy.position;
-    // add the particle effect to the same node the seal is on
-    [enemy.parent addChild:explosion];
-    // finally, remove the destroyed seal
-    [enemy removeFromParent];
-    [sounds playEffect:@"explosion.mp3"];
+    if(enemyCount){
+        // load particle effect
+        CCParticleSystem * explosion = (CCParticleSystem *)[CCBReader load:@"EnemyExplosion"];
+        // make the particle effect clean itself up, once it is completed
+        explosion.autoRemoveOnFinish = TRUE;
+        // place the particle effect on the seals position
+        explosion.position = enemy.position;
+        // add the particle effect to the same node the seal is on
+        [enemy.parent addChild:explosion];
+        // finally, remove the destroyed seal
+        [enemy removeFromParent];
+        [sounds playEffect:@"explosion.mp3"];
+        enemyCount--;
+        if(!enemyCount) {
+            [self wonLevel];
+        }
+    }
 }
 
 - (void)back {
@@ -118,6 +127,23 @@ static const float MIN_SPEED = 5.f;
 
 - (void)reset {
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
+}
+
+- (int)calculateScore {
+    return triesCount * 10000 + 2500;
+}
+
+- (void)wonLevel {
+    UIAlertView * alert = [[UIAlertView alloc]
+                           initWithTitle:@"Ganaste"
+                           message: [NSString stringWithFormat:@"Puntaje: %d",[self calculateScore]]
+                           delegate:nil
+                           cancelButtonTitle:@"Continuar"
+                           otherButtonTitles:nil];
+    [defaults setObject:@"True" forKey: [NSString stringWithFormat:@"%@Won",
+        [defaults objectForKey:@"LevelSelected"]]];
+    [alert show];
+    [self back];
 }
 
 @end
