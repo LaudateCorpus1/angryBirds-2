@@ -92,6 +92,23 @@ static const float MIN_SPEED = 1.f;
     }
 }
 
+- (void)birdRemove:(CCNode *)bird {
+    // load particle effect
+    CCParticleSystem * explosion = (CCParticleSystem *)[CCBReader load:@"EnemyExplosion"];
+    // make the particle effect clean itself up, once it is completed
+    explosion.autoRemoveOnFinish = TRUE;
+    // place the particle effect on the seals position
+    explosion.position = bird.position;
+    // add the particle effect to the same node the seal is on
+    [bird.parent addChild:explosion];
+    // finally, remove the destroyed seal
+    [bird removeFromParent];
+    [sounds playEffect:@"explosion.mp3"];
+    if(!triesCount) {
+        [self lostLevel];
+    }
+}
+
 - (void)back {
     [sounds stopEverything];
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"LevelSelector"]];
@@ -117,6 +134,8 @@ static const float MIN_SPEED = 1.f;
 }
 
 - (void)nextAttempt {
+    if(_currentBird != NULL)
+        [self birdRemove: _currentBird];
     _currentBird = nil;
     [_contentNode stopAction:_followBird];
     [_contentNode setPosition:ccp(0, 0)];
@@ -142,6 +161,17 @@ static const float MIN_SPEED = 1.f;
                            otherButtonTitles:nil];
     [defaults setObject:@"True" forKey: [NSString stringWithFormat:@"%@Won",
         [defaults objectForKey:@"LevelSelected"]]];
+    [alert show];
+    [self back];
+}
+
+- (void)lostLevel {
+    UIAlertView * alert = [[UIAlertView alloc]
+                           initWithTitle:@"Perdiste"
+                           message: [NSString stringWithFormat:@"Puntaje: %d",[self calculateScore]]
+                           delegate:nil
+                           cancelButtonTitle:@"Continuar"
+                           otherButtonTitles:nil];
     [alert show];
     [self back];
 }
