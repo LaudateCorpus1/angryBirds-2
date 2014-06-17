@@ -143,7 +143,7 @@ static const float MIN_SPEED = 2.f;
     _currentBird = nil;
     [_contentNode stopAction:_followBird];
     [_contentNode setPosition:ccp(0, 0)];
-// ¿Por qué oscila la cámara?
+// TODO: Arreglar esto.
 //    CCActionMoveTo * actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
 //    [_contentNode runAction:actionMoveTo];
 }
