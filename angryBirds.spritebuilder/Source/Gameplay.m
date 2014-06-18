@@ -158,7 +158,7 @@ static const float MIN_SPEED = 2.f;
 
 - (void)wonLevel {
     UIAlertView * alert = [[UIAlertView alloc]
-                           initWithTitle:@"Ganaste"
+                           initWithTitle:@"¡Ganaste! 😃"
                            message: [NSString stringWithFormat:@"Puntaje: %d",[self calculateScore]]
                            delegate:nil
                            cancelButtonTitle:@"Continuar"
@@ -171,7 +171,7 @@ static const float MIN_SPEED = 2.f;
 
 - (void)lostLevel {
     UIAlertView * alert = [[UIAlertView alloc]
-                           initWithTitle:@"Perdiste"
+                           initWithTitle:@"Perdiste 😭"
                            message: [NSString stringWithFormat:@"Puntaje: %d",[self calculateScore]]
                            delegate:nil
                            cancelButtonTitle:@"Continuar"
