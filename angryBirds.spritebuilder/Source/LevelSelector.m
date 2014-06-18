@@ -38,6 +38,7 @@
     [defaults setObject:@"Level1" forKey:@"LevelSelected"];
     [defaults setObject:@"3" forKey:@"BirdCount"];
     [defaults setObject:@"1" forKey:@"EnemyCount"];
+    [defaults setObject:@"Bird" forKey:@"BirdType"];
     [self loadLevel];
 }
 
@@ -45,6 +46,7 @@
     [defaults setObject:@"Level2" forKey:@"LevelSelected"];
     [defaults setObject:@"4" forKey:@"BirdCount"];
     [defaults setObject:@"2" forKey:@"EnemyCount"];
+    [defaults setObject:@"Bird" forKey:@"BirdType"];
     [self loadLevel];
 }
 
@@ -52,6 +54,7 @@
     [defaults setObject:@"Level3" forKey:@"LevelSelected"];
     [defaults setObject:@"5" forKey:@"BirdCount"];
     [defaults setObject:@"2" forKey:@"EnemyCount"];
+    [defaults setObject:@"Icebird" forKey:@"BirdType"];
     [self loadLevel];
 }
 

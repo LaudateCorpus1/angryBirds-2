@@ -46,7 +46,7 @@ static const float MIN_SPEED = 2.f;
 
 - (void)launchBird:(id)sender {
     if (triesCount) {
-        CCNode * bird = [CCBReader load:@"Bird"];
+        CCNode * bird = [CCBReader load:[defaults objectForKey:@"BirdType"]];
         _currentBird = bird;
         // Calculo la rotación en Radianes
         float rotationRadians = CC_DEGREES_TO_RADIANS(_launcher.rotation);
