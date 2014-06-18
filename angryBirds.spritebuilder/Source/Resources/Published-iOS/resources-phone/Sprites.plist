@@ -111,7 +111,7 @@
 		<key>Sprites/circlewood.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{168, 209}, {76, 74}}</string>
+			<string>{{191, 209}, {76, 74}}</string>
 			<key>offset</key>
 			<string>{1, 0}</string>
 			<key>rotated</key>
@@ -133,6 +133,58 @@
 			<string>{{0, 0}, {25, 24}}</string>
 			<key>sourceSize</key>
 			<string>{25, 24}</string>
+		</dict>
+		<key>Sprites/icebird_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{168, 218}, {21, 20}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {21, 20}}</string>
+			<key>sourceSize</key>
+			<string>{21, 20}</string>
+		</dict>
+		<key>Sprites/icebird_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{168, 240}, {21, 20}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {21, 20}}</string>
+			<key>sourceSize</key>
+			<string>{21, 20}</string>
+		</dict>
+		<key>Sprites/icebird_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{168, 262}, {21, 20}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {21, 20}}</string>
+			<key>sourceSize</key>
+			<string>{21, 20}</string>
+		</dict>
+		<key>Sprites/icebird_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{168, 196}, {21, 20}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {21, 20}}</string>
+			<key>sourceSize</key>
+			<string>{21, 20}</string>
 		</dict>
 		<key>Sprites/launcher.png</key>
 		<dict>
@@ -176,7 +228,7 @@
 		<key>Sprites/pigg-1.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{447, 165}, {49, 48}}</string>
+			<string>{{269, 215}, {49, 48}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -189,7 +241,7 @@
 		<key>Sprites/pigg-2.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{455, 54}, {49, 48}}</string>
+			<string>{{447, 165}, {49, 48}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -202,7 +254,7 @@
 		<key>Sprites/pigg-3.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{79, 278}, {49, 48}}</string>
+			<string>{{455, 54}, {49, 48}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -345,11 +397,11 @@
 		<key>Sprites/unstar.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{246, 209}, {47, 41}}</string>
+			<string>{{79, 278}, {47, 41}}</string>
 			<key>offset</key>
 			<string>{1, 0}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceColorRect</key>
 			<string>{{2, 2}, {47, 41}}</string>
 			<key>sourceSize</key>

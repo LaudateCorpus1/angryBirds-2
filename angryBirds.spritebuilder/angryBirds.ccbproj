@@ -193,6 +193,11 @@
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
+		<key>Sprites/star.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
 		<key>Sprites/tower-btn.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -207,6 +212,11 @@
 		<dict>
 			<key>scaleFrom</key>
 			<integer>1</integer>
+		</dict>
+		<key>Sprites/unstar.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
 		</dict>
 		<key>Sprites/volume.png</key>
 		<dict>
