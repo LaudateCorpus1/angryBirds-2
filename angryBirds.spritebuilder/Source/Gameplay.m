@@ -8,7 +8,7 @@
 
 #import "Gameplay.h"
 
-static const float MIN_SPEED = 2.f;
+static const float MIN_SPEED = 5.0f;
 
 @implementation Gameplay {
     CCPhysicsNode * _physicsNode;

@@ -8,7 +8,7 @@
 
 #import "CCNode.h"
 
-#define KINETIC_ENERGY_REQUIRED 2500.0f
+#define KINETIC_ENERGY_REQUIRED 5000.0f
 
 @interface Gameplay : CCNode <CCPhysicsCollisionDelegate>
 
