@@ -35,43 +35,63 @@
 }
 
 - (void) playLevel2 {
-    [defaults setObject:@"Level2" forKey:@"LevelSelected"];
-    [defaults setObject:@"3" forKey:@"BirdCount"];
-    [defaults setObject:@"2" forKey:@"EnemyCount"];
-    [defaults setObject:@"Bird" forKey:@"BirdType"];
-    [self loadLevel];
+    if([defaults objectForKey:@"Level1Won"] != nil){
+        [defaults setObject:@"Level2" forKey:@"LevelSelected"];
+        [defaults setObject:@"3" forKey:@"BirdCount"];
+        [defaults setObject:@"2" forKey:@"EnemyCount"];
+        [defaults setObject:@"Bird" forKey:@"BirdType"];
+        [self loadLevel];
+    } else {
+        [self alertNeedWinLevel:1];
+    }
 }
 
 - (void) playLevel3 {
-    [defaults setObject:@"Level3" forKey:@"LevelSelected"];
-    [defaults setObject:@"3" forKey:@"BirdCount"];
-    [defaults setObject:@"2" forKey:@"EnemyCount"];
-    [defaults setObject:@"Bird" forKey:@"BirdType"];
-    [self loadLevel];
+    if([defaults objectForKey:@"Level2Won"] != nil){
+        [defaults setObject:@"Level3" forKey:@"LevelSelected"];
+        [defaults setObject:@"3" forKey:@"BirdCount"];
+        [defaults setObject:@"2" forKey:@"EnemyCount"];
+        [defaults setObject:@"Bird" forKey:@"BirdType"];
+        [self loadLevel];
+    } else {
+        [self alertNeedWinLevel:2];
+    }
 }
 
 - (void) playLevel4 {
-    [defaults setObject:@"Level4" forKey:@"LevelSelected"];
-    [defaults setObject:@"2" forKey:@"BirdCount"];
-    [defaults setObject:@"1" forKey:@"EnemyCount"];
-    [defaults setObject:@"Icebird" forKey:@"BirdType"];
-    [self loadLevel];
+    if([defaults objectForKey:@"Level3Won"] != nil){
+        [defaults setObject:@"Level4" forKey:@"LevelSelected"];
+        [defaults setObject:@"2" forKey:@"BirdCount"];
+        [defaults setObject:@"1" forKey:@"EnemyCount"];
+        [defaults setObject:@"Icebird" forKey:@"BirdType"];
+        [self loadLevel];
+    } else {
+        [self alertNeedWinLevel:3];
+    }
 }
 
 - (void) playLevel5 {
-    [defaults setObject:@"Level5" forKey:@"LevelSelected"];
-    [defaults setObject:@"2" forKey:@"BirdCount"];
-    [defaults setObject:@"2" forKey:@"EnemyCount"];
-    [defaults setObject:@"Icebird" forKey:@"BirdType"];
-    [self loadLevel];
+    if([defaults objectForKey:@"Level4Won"] != nil){
+        [defaults setObject:@"Level5" forKey:@"LevelSelected"];
+        [defaults setObject:@"2" forKey:@"BirdCount"];
+        [defaults setObject:@"2" forKey:@"EnemyCount"];
+        [defaults setObject:@"Icebird" forKey:@"BirdType"];
+        [self loadLevel];
+    } else {
+        [self alertNeedWinLevel:4];
+    }
 }
 
 - (void) playLevel6 {
-    [defaults setObject:@"Level6" forKey:@"LevelSelected"];
-    [defaults setObject:@"2" forKey:@"BirdCount"];
-    [defaults setObject:@"2" forKey:@"EnemyCount"];
-    [defaults setObject:@"Icebird" forKey:@"BirdType"];
-    [self loadLevel];
+    if([defaults objectForKey:@"Level5Won"] != nil){
+        [defaults setObject:@"Level6" forKey:@"LevelSelected"];
+        [defaults setObject:@"2" forKey:@"BirdCount"];
+        [defaults setObject:@"2" forKey:@"EnemyCount"];
+        [defaults setObject:@"Icebird" forKey:@"BirdType"];
+        [self loadLevel];
+    } else {
+        [self alertNeedWinLevel:5];
+    }
 }
 
 - (void)loadStars
@@ -110,6 +130,17 @@
 - (void) back {
     [music stopEverything];
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"MainScene"]];
+}
+
+- (void) alertNeedWinLevel:(int)levelNumber
+{
+    UIAlertView * alert = [[UIAlertView alloc]
+                           initWithTitle:@"Todavía no..."
+                           message: [NSString stringWithFormat:@"Completa el nivel %d primero.",levelNumber]
+                           delegate:nil
+                           cancelButtonTitle:@"Entendido"
+                           otherButtonTitles:nil];
+    [alert show];
 }
 
 @end
