@@ -25,9 +25,11 @@ static const float MIN_SPEED = 5.0f;
     int enemyCount;
     NSUserDefaults * defaults;
     CCNode * lastEnemy;
+    Boolean didEndedPanorama;
 }
 
 - (void)didLoadFromCCB {
+    didEndedPanorama = NO;
     self.userInteractionEnabled = TRUE;
 //    _physicsNode.debugDraw = TRUE;
     _physicsNode.collisionDelegate = self;
@@ -42,16 +44,22 @@ static const float MIN_SPEED = 5.0f;
     [sounds playBg:@"background.mp3" loop:YES];
     CCActionMoveTo * panorama = [CCActionMoveTo actionWithDuration:2.5f position:ccp(-350.0f, 0.f)];
     CCActionMoveTo * panoramaBack = [CCActionMoveTo actionWithDuration:2.5f position:ccp(0.0f, 0.f)];
-    [self runAction: [CCActionSequence actions:panorama, panoramaBack, nil]];
+    [self runAction: [CCActionSequence actions:panorama, panoramaBack, [CCActionCallFunc actionWithTarget:self selector:@selector (ended)], nil]];
+}
+
+- (void)ended
+{
+    didEndedPanorama = YES;
 }
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    [self launchBird:self];
+    if(didEndedPanorama)
+        [self launchBird:self];
 }
 
 - (void)launchBird:(id)sender {
-    if (triesCount) {
+    if (didEndedPanorama && triesCount) {
         CCNode * bird = [CCBReader load:[defaults objectForKey:@"BirdType"]];
         _currentBird = bird;
         // Calculo la rotación en Radianes
