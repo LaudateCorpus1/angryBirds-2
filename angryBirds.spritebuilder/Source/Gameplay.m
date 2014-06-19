@@ -44,6 +44,11 @@ static const float MIN_SPEED = 5.0f;
     [self runAction: [CCActionSequence actions:panorama, panoramaBack, nil]];
 }
 
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    [self launchBird:self];
+}
+
 - (void)launchBird:(id)sender {
     if (triesCount) {
         CCNode * bird = [CCBReader load:[defaults objectForKey:@"BirdType"]];
