@@ -24,6 +24,7 @@ static const float MIN_SPEED = 5.0f;
     CCAction * _followBird;
     int enemyCount;
     NSUserDefaults * defaults;
+    CCNode * lastEnemy;
 }
 
 - (void)didLoadFromCCB {
@@ -77,27 +78,27 @@ static const float MIN_SPEED = 5.0f;
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair enemy:(CCNode *)nodeA wildcard:(CCNode *)nodeB{
     float energy = [pair totalKineticEnergy];
     if (energy > KINETIC_ENERGY_REQUIRED) {
-        [self enemyRemove:nodeA];
+        if(lastEnemy != nodeA)
+            [self enemyRemove:nodeA];
     }
 }
 
 - (void)enemyRemove:(CCNode *)enemy {
-    if(enemyCount){
-        // load particle effect
-        CCParticleSystem * explosion = (CCParticleSystem *)[CCBReader load:@"EnemyExplosion"];
-        // make the particle effect clean itself up, once it is completed
-        explosion.autoRemoveOnFinish = TRUE;
-        // place the particle effect on the seals position
-        explosion.position = enemy.position;
-        // add the particle effect to the same node the seal is on
-        [enemy.parent addChild:explosion];
-        // finally, remove the destroyed seal
-        [enemy removeFromParent];
-        [sounds playEffect:@"explosion.mp3"];
-        enemyCount--;
-        if(!enemyCount) {
-            [self wonLevel];
-        }
+    // load particle effect
+    CCParticleSystem * explosion = (CCParticleSystem *)[CCBReader load:@"EnemyExplosion"];
+    // make the particle effect clean itself up, once it is completed
+    explosion.autoRemoveOnFinish = TRUE;
+    // place the particle effect on the seals position
+    explosion.position = enemy.position;
+    // add the particle effect to the same node the seal is on
+    [enemy.parent addChild:explosion];
+    // finally, remove the destroyed seal
+    [enemy removeFromParent];
+    [sounds playEffect:@"explosion.mp3"];
+    enemyCount--;
+    lastEnemy = enemy;
+    if(!enemyCount) {
+        [self wonLevel];
     }
 }
 
