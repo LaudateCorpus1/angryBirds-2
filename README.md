@@ -7,5 +7,3 @@ Inspirado en Angry Birds
 https://www.angrybirds.com/play/angry-birds
 
 Franco Román Meola
-
-Todos los derechos Reservados
